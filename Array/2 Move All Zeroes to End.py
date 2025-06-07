@@ -21,4 +21,16 @@ def pushZerosToEnd(arr):
 
 
 
-#other way
+#OTHER WAY
+
+#pointer to traack position of non-zero element
+def movezero(arr):
+    count = 0
+    for i in range(len(arr)):
+        if arr[i]!=0:
+            arr[i],arr[count]=arr[count],arr[i]
+
+            count+=1
+    return arr
+
+print(movezero([2,3,4,0,3,0,1,4,0]))
